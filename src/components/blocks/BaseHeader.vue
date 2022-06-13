@@ -1,8 +1,10 @@
 <template>
-  <header class="container">
-      <img src="../../assets/img/netflix-logo.png">
-      <SearchBar/>
-  </header>
+    <header>
+        <div class="container-fluid">
+            <img src="../../assets/img/netflix-logo.png">
+            <SearchBar/>
+        </div>
+    </header>
 </template>
 
 <script>
@@ -14,15 +16,20 @@ export default {
 
 <style lang="scss" scoped>
 header {
-    display: flex;
-    justify-content: space-between;
     padding: .625rem;
     background-color: black;
     color: lightgray;
 
+    .container-fluid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     img {
         width: 10%;
     }
+
     }
    
 
