@@ -1,5 +1,6 @@
 <template>
-  <header>
+  <header class="container">
+      <img src="../../assets/img/netflix-logo.png">
       <SearchBar/>
   </header>
 </template>
@@ -11,6 +12,18 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: .625rem;
+    background-color: black;
+    color: lightgray;
+
+    img {
+        width: 10%;
+    }
+    }
+   
 
 </style>

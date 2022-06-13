@@ -10,6 +10,7 @@
 import BaseHeader from './components/blocks/BaseHeader.vue';
 import BaseMain from './components/blocks/BaseMain.vue';
 
+
 export default {
   name: 'App',
   components: {
@@ -19,6 +20,6 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-
+<style lang="scss">
+@import './assets/style/global.scss';
 </style>
