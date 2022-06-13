@@ -43,13 +43,12 @@ export default {
         }
     },
     methods: {
-     starVote(vote) {
-                let htmlStars = ''
-                for (let i = 0; i < Math.ceil(vote / 2); i++) {
-                    htmlStars += '<i class="fa-solid fa-star"></i>';
-                }
-                return htmlStars;
-            }
+        voteStar(vote) {
+            return Math.ceil(vote / 2) ;
+        }
+        
+
+    },
 }
 
 </script>
