@@ -92,6 +92,7 @@ export default {
         color: white;
         opacity: 0;
         transition: opacity 0.3s;
+        padding: 10px;
     }   
     .ms_card {
         position: relative;
