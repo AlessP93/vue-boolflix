@@ -3,13 +3,16 @@
         <h1>Films</h1>
         <div class="row">
             <div class="ms_card col-12 col-md-6 col-lg-3" v-for="(film, i) in sharedData.films" :key="i">
-                <img :src="'https://image.tmdb.org/t/p/w300' + film.poster_path">
-                <div class="overlay">
-                    <h3>{{film.title}}</h3>
-                    <span>{{film.original_title}}</span>
-                    <div>
-                        <span><lang-flag :iso="film.original_language"/></span>
-                        <span v-html="starsVote(film.vote_average)"></span>
+                <div class="ms_card">
+                    <img v-if="film.poster_path" :src="'https://image.tmdb.org/t/p/w300' + film.poster_path">
+                    <img v-esle src="https://via.placeholder.com/306x493">
+                    <div class="overlay">
+                        <h3>{{film.title}}</h3>
+                        <span>{{film.original_title}}</span>
+                        <div>
+                            <span><lang-flag :iso="film.original_language"/></span>
+                            <span v-html="starsVote(film.vote_average)"></span>
+                        </div>
                     </div>
                 </div>
             </div>
