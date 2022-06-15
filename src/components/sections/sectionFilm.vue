@@ -5,7 +5,7 @@
             <div class="ms_card col-12 col-md-6 col-lg-3" v-for="(film, i) in sharedData.films" :key="i">
                 <div class="ms_card">
                     <img v-if="film.poster_path" :src="'https://image.tmdb.org/t/p/w300' + film.poster_path">
-                    <img v-esle src="https://via.placeholder.com/306x493">
+                    <img v-else src="https://via.placeholder.com/342x482" alt="">
                     <div class="overlay">
                         <h3>{{film.title}}</h3>
                         <span>{{film.original_title}}</span>
@@ -50,7 +50,7 @@ export default {
             // creo 2 variabili vuote
             let htmlStars = '';
             let htmlStarsEmpty = '';
-            // ciclo per dividere il "voto" diviso 2
+            // ciclo per dividere il "voto" diviso 2 ---- arrotonda math ceil
             for (let i = 0; i < Math.ceil(vote / 2); i++) {
                 htmlStars += '<i class="fa-solid fa-star"></i>';
             }
